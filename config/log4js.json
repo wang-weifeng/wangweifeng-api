@@ -1,0 +1,10 @@
+{
+  "appenders": [
+    {
+      "type": "dateFile",
+      "filename": "logs/wangweifeng-api",
+      "pattern": "-yyyy-MM-dd.log",
+      "alwaysIncludePattern": true
+    }
+  ]
+}

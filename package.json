@@ -1,0 +1,48 @@
+{
+  "name": "node-template",
+  "version": "0.0.1",
+  "description": "base_template",
+  "main": "bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "wwf",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.0.0-rc.5",
+    "body-parser": "^1.15.1",
+    "connect-mongo": "^1.2.0",
+    "cookie-parser": "^1.4.1",
+    "crypto": "0.0.3",
+    "ejs": "^2.4.1",
+    "eventproxy": "^0.3.4",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "log4js": "^0.6.36",
+    "moment": "^2.13.0",
+    "request": "^2.72.0",
+    "underscore": "^1.8.3",
+    "utility": "^1.8.0",
+    "validator": "^5.2.0",
+    "wechat-oauth": "^1.1.1",
+    "weui": "^0.4.3",
+    "xss": "^0.2.13"
+  },
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-size": "^2.1.0",
+    "gulp-uglify": "^1.5.4",
+    "jshint": "^2.9.2",
+    "mocha": "^2.5.3",
+    "should": "^9.0.2",
+    "supertest": "^1.2.0"
+  }
+}

@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+var app = require('../app');
+var config  = require('../config/config');
+var logger = require('../util/log4js_util');
+
+app.listen(config.port, function () {
+    logger.info("Listening on port " + config.port + " " + app.settings.env);
+    console.log("You can debug your app with http://" + config.host);
+});
