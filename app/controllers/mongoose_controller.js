@@ -7,9 +7,22 @@ var logger = require('../../util/log4js_util');
 var config = require('../../config/config');
 var resKit = require('../../util/response_util');
 var cipherUtil = require('../../util/cipher_util');
+var mongooseProxy = require('../../proxy/mongoose_proxy');
 var User = require('../../config/user');
 
 var mongooseController = {};
+
+/**
+ * mongooses首页
+ * @param req
+ * @param res
+ */
+mongooseController.renderIndex = function(req,res){
+    logger.info("renderIndex --> ");
+    var renderResult = {title: msgCode.renderIndex.title};
+    res.render("mongoose/index",renderResult);
+
+};
 
 /**
  * mongoose查询信息
@@ -17,16 +30,25 @@ var mongooseController = {};
  * @param res
  */
 mongooseController.queryCheck = function(req,res){
-    var wherestr = {};
-    User.find(wherestr, function(err, result){
-        if (err) {
-            console.log("Error:" + err);
-        }
-        else {
-            console.log("result:" + result);
-            return res.json(result);
-        }
-    });
+    // var param = {};
+    // User.find(param, function(err, result){
+    //     if(err || _.isUndefined(result)){
+    //         resKit.err(msgCode.queryCheck, res);
+    //     } else {
+    //         logger.info("queryCheck --> " + result);
+    //         resKit.succes(result,res);
+    //     }
+    // });
+    for(var i = 1; i <= 100; i++) {
+        console.log("success " + i);
+        mongooseProxy.queryCheck(function (err, result) {
+            if (err || _.isUndefined(result)) {
+                console.log("err");
+            } else {
+                console.log("success " + i);
+            }
+        });
+    }
 };
 
 

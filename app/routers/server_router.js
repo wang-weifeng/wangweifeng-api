@@ -15,6 +15,12 @@ Router.configure = function(app){
 
 	var baseName = config.app;
 
+	/**查询首页 */
+	router.get(baseName + version[0] +'/mongoose/index',mongooseController.renderIndex);
+
+	/**渲染增加页面 */
+	router.get(baseName + version[0] +'/mongoose/insert',mongooseController.renderIndex);
+
 	/**查询信息ajax */
 	router.get(baseName + version[0] +'/user/check',mongooseController.queryCheck);
 
